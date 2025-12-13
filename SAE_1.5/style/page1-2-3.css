@@ -1,0 +1,48 @@
+
+header{
+  background-color: rgb(127, 157, 255);
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    thead th {
+      background: #f4f4f4;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.3em;
+    }
+
+    td {
+      font-weight: normal;
+      background: #fafafa;
+    }
+h2{
+  text-decoration: underline;
+  padding: 20px;
+}
+
+
+
+.cap, .abg, .inrae{
+  width: 70px;
+  height:auto;
+  cursor: zoom-in;
+}
+
+main {
+      max-width: 1000px;
+      margin: 20px auto;
+      
+        }

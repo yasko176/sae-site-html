@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Création de compte</title>
+        <link rel="stylesheet" href="style/page-6-7.css">
+        <link rel="stylesheet" href="style/index.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="https://www.iut-velizy-rambouillet.uvsq.fr/"> <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" width="400px" height="auto"></a>
+            <h1>IUT de Vélizy - Département informatique</h1>
+        </header>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+
+                <!-- Onglet Organisations -->
+                <li class="dropdown">
+                    <a href="#">Organisations</a>
+                    <ul class="submenu">
+                        <li><a href="page1.html">Capgemini Engineering</a></li>
+                        <li><a href="page2.html">Association Bernard Gregory</a></li>
+                        <li><a href="page3.html">INRAE</a></li>
+                    </ul>
+                </li>
+                <li><a href="page4.html">Secteur</a></li>
+                <li><a href="page5.html">Idées</a></li>
+                <li class="connexion"><a href="page6.html">Connexion</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="register-container">
+                <h1>Créer un compte</h1>
+
+                <form method="POST" action="#">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sexe</label>
+
+                        <input type="radio" id="homme" name="sexe" value="homme" required>
+                        <label for="homme">Homme</label>
+
+                        <input type="radio" id="femme" name="sexe" value="femme">
+                        <label for="femme">Femme</label>
+
+                        <input type="radio" id="autre" name="sexe" value="autre">
+                        <label for="autre">Autre</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date de naissance</label>
+
+                        <label for="day">Jour</label>
+                        <select id="day" name="day" required>
+                            <option value="">Jour</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <!-- etc -->
+                            <option value="31">31</option>
+                        </select>
+
+                        <label for="month">Mois</label>
+                        <select id="month" name="month" required>
+                            <option value="">Mois</option>
+                            <option value="1">Janvier</option>
+                            <option value="2">Février</option>
+                            <option value="3">Mars</option>
+                            <option value="4">Avril</option>
+                            <option value="5">Mai</option>
+                            <option value="6">Juin</option>
+                            <option value="7">Juillet</option>
+                            <option value="8">Août</option>
+                            <option value="9">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+
+                        <label for="year">Année</label>
+                    <select id="year" name="year" required>
+                            <option value="">Année</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <!-- etc -->
+                            <option value="1950">1950</option>
+                        </select>
+                    </div>
+
+
+                
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password">Confirmer le mot de passe</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+
+                    <button type="submit">Créer le compte</button>
+                </form>
+
+                    <div class="footer">
+                        <p>Déjà un compte ? <a href="page6.html">Se connecter</a></p>
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="page6.html" class="precedente">Page Précédente</a>
+            <p>Rejoignez-nous</p>
+            <a href="index.html" class="suivante">Retour à l'accueil</a>
+        </footer>
+
+
+    </body>
+
+</html>

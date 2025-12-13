@@ -1,0 +1,110 @@
+
+header{
+    background-color: #4f46e5;
+}
+
+header h1{
+    color: white;
+}
+
+.login-container {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ===== CONTAINERS ===== */
+.login-container,
+.register-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
+/* ===== FORM ===== */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #374151;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* ===== DATE DE NAISSANCE ===== */
+select {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== RADIOS ===== */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* ===== BOUTON ===== */
+button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,53 @@
+        header {
+            color: white;
+        }
+        .titre4{
+            background-color: #0077b6;
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        main h1{
+            text-decoration: underline;
+        }
+        .analyse {
+            color: #023e8a;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #0077b6;
+            color: white;
+        }
+                header {
+            color: white;
+            
+        }
+        .titre5{
+            background-color: #005f73;    
+
+        }
+        
+
+       
+        .dynamiser {
+            color: #0a9396;
+        }
+        
