@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Page d'accueil</title>
-        <link rel="stylesheet" href="style/index.css">
-        <link rel="stylesheet" href="style/page1-2-3.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
 
-    <body>
-        
-        <header class="princ">
-            <a href="https://www.iut-velizy-rambouillet.uvsq.fr/"><img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" width="400px" height="auto"></a>
-            <h1>IUT de Vélizy - Département informatique</h1>
-        </header>
+<!-- Header : partie haute de la page avec le logo et le titre -->
+<header class="princ">
+    <!-- Logo de l'IUT qui renvoie vers le site officiel -->
+    <a href="https://www.iut-velizy-rambouillet.uvsq.fr/" >
+        <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" class="logo-iut" width="400px">
+    </a>
+    <!-- Titre principal du site -->
+    <h1>IUT de Vélizy - Département informatique</h1>
+</header>
 
-        <!-- Organisations (menu déroulant) -->
-       <nav class="menu">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
+<!-- Menu de navigation : permet de se déplacer entre les différentes pages -->
+<nav class="menu">
+    <ul>
+        <!-- Lien vers la page d'accueil -->
+        <li><a href="index.html">Accueil</a></li>
 
-                <!-- Onglet Organisations -->
-                <li class="dropdown">
-                    <a href="#">Organisations</a>
-                    <ul class="submenu">
-                        <li><a href="page1.html">Capgemini Engineering</a></li>
-                        <li><a href="page2.html">Association Bernard Gregory</a></li>
-                        <li><a href="page3.html">INRAE</a></li>
-                    </ul>
-                </li>
-                <li><a href="page4.html">Secteur</a></li>
-                <li><a href="page5.html">Idées</a></li>
-                <li class="connexion"><a href="page6.html">Connexion</a></li>
+        <!-- Menu déroulant pour les organisations -->
+        <li class="dropdown">
+            <a href="#">Organisations</a>
+            <ul class="submenu">
+                <!-- Chaque lien correspond à une organisation étudiée -->
+                <li><a href="page1.html">Capgemini Engineering</a></li>
+                <li><a href="page2.html">Association Bernard Gregory</a></li>
+                <li><a href="page3.html">INRAE</a></li>
             </ul>
-        </nav>
-        
-        <main>
-            <h1>Bienvenue sur notre page d'accueil !</h1>
-        
-            <p>Dans le cadre de notre <abbr title="Situation d'Apprentissage et d'Évaluation">SAE</abbr> 
-            portant sur le secteur des activités spécialisées,
-            scientifiques et techniques, nous avons analysé trois organisations représentatives 
-            de ce domaine. Nous nous sommes intéressés à Capgemini Engineering, une entreprise 
-            internationale spécialisée dans l'ingénierie et le numérique ; à l'Association 
-            Bernard Gregory (ABG), dédiée à l'accompagnement professionnel des jeunes chercheurs ; 
-            et à l'<abbr title="Institut national de recherche pour l'agriculture, l'alimentation et 
-            l'environnement">INRAE</abbr> un organisme public majeur dans la recherche en agriculture, 
-            alimentation et environnement.</p>
+        </li>
 
-            <p>Ce projet est réalisé en binôme par Yacine et Achraf, ce qui nous permet de partager nos compétences, 
-            de croiser nos idées et d'enrichir notre compréhension du secteur. À travers ce site, vous 
-            pourrez découvrir une présentation claire et structurée de chacune de ces organisations, 
-            leur rôle dans le domaine scientifique et technique, ainsi que les spécificités qui les 
-            distinguent. Bonne visite !</p>
-        </main>
-        
+        <!-- Autres pages du projet -->
+        <li><a href="page4.html">Secteur</a></li>
+        <li><a href="page5.html">Idées</a></li>
 
-        <footer>
-            <a href="page7.html" class="precedente">Page Précédente</a>
-            <p>© 2025 Analyse du secteur scientifique et technique</p>
-            <a href="page1.html" class="suivante">Page suivante</a>
-        </footer>
+        <!-- Lien vers la page de connexion (placé à droite grâce au CSS) -->
+        <li class="connexion"><a href="page6.html">Connexion</a></li>
+    </ul>
+</nav>
 
-       
-       
-    </body>
+<!-- Contenu principal de la page -->
+<main>
+    <!-- Hero section : bloc central avec un titre et une présentation -->
+    <section class="hero">
+        <h1>Bienvenue sur notre page d'accueil !</h1>
+        <p>
+            Dans le cadre de notre <abbr title="Situation d'Apprentissage et d'Évaluation">SAE</abbr>
+            portant sur le secteur des activités spécialisées, scientifiques et techniques,
+            nous avons analysé trois organisations représentatives de ce domaine.
+        </p>
+        <p>
+            Ce projet est réalisé en binôme par Yacine et Achraf, ce qui nous permet de partager nos compétences,
+            croiser nos idées et enrichir notre compréhension du secteur. Bonne visite !
+        </p>
+    </section>
+</main>
 
+<!-- Footer : partie basse de la page avec navigation et droits -->
+<footer>
+    <!-- Lien vers la page précédente -->
+    <a href="page7.html" class="precedente">Page Précédente</a>
+
+    <!-- Texte centré avec les droits -->
+    <p>© 2025 Analyse du secteur scientifique et technique</p>
+
+    <!-- Lien vers la page suivante -->
+    <a href="page1.html" class="suivante">Page suivante</a>
+</footer>
+<!-- Case à cocher cachée qui sert de "contrôleur" -->
+<!-- Quand elle est cochée, la bannière disparaît grâce au CSS -->
+<input type="checkbox" id="cookie-toggle" hidden>
+
+<!-- Bannière RGPD / Cookies -->
+<div class="cookie-banner">
+    <!-- Texte explicatif -->
+    <p>
+        Ce site utilise des cookies pour améliorer votre expérience et respecter le RGPD.
+        Voulez-vous accepter ou refuser l’utilisation des cookies ?
+    </p>
+
+    <!-- Boutons (en réalité des labels liés à la case cachée) -->
+    <div class="cookie-buttons">
+        <!-- Bouton Accepter -->
+        <label for="cookie-toggle" class="btn accept">Accepter</label>
+        <!-- Bouton Refuser -->
+        <label for="cookie-toggle" class="btn refuse">Refuser</label>
+    </div>
+</div>
+
+</body>
 </html>

@@ -1,68 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Connexion</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/page-6-7.css">
-        <link rel="stylesheet" href="style/index.css">
-        
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <!-- Titre affiché dans l’onglet du navigateur -->
+    <title>Connexion</title>
+    <!-- Permet d’adapter la page aux écrans mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
-        <header>
-            <a href="https://www.iut-velizy-rambouillet.uvsq.fr/"> <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" width="400px" height="auto"></a>
-            <h1>IUT de Vélizy - Département informatique</h1>
-        </header>
+    <!-- Lien vers la feuille de style CSS commune -->
+    <link rel="stylesheet" href="style/index.css">
+</head>
 
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
+<body>
+<!-- Header : partie haute avec logo et titre -->
+<header>
+    <!-- Logo de l’IUT cliquable qui renvoie vers le site officiel -->
+    <a href="https://www.iut-velizy-rambouillet.uvsq.fr/">
+        <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" width="400px" height="auto">
+    </a>
+    <!-- Titre principal -->
+    <h1>IUT de Vélizy - Département informatique</h1>
+</header>
 
-                <!-- Onglet Organisations -->
-                <li class="dropdown">
-                    <a href="#">Organisations</a>
-                    <ul class="submenu">
-                        <li><a href="page1.html">Capgemini Engineering</a></li>
-                        <li><a href="page2.html">Association Bernard Gregory</a></li>
-                        <li><a href="page3.html">INRAE</a></li>
-                    </ul>
-                </li>
-                <li><a href="page4.html">Secteur</a></li>
-                <li><a href="page5.html">Idées</a></li>
-                <li class="connexion"><a href="page6.html">Connexion</a></li>
+<!-- Menu de navigation principal -->
+<nav class="menu">
+    <ul>
+        <!-- Lien vers la page d’accueil -->
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- Menu déroulant pour les organisations -->
+        <li class="dropdown">
+            <a href="#">Organisations</a>
+            <ul class="submenu">
+                <li><a href="page1.html">Capgemini Engineering</a></li>
+                <li><a href="page2.html">Association Bernard Gregory</a></li>
+                <li><a href="page3.html">INRAE</a></li>
             </ul>
-        </nav>
-        <main>
-            <section class="login-container">
-                <h1>Connexion</h1>
+        </li>
 
-                <form method="POST" action="login.php">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+        <!-- Autres pages -->
+        <li><a href="page4.html">Secteur</a></li>
+        <li><a href="page5.html">Idées</a></li>
 
-                    <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
+        <!-- Lien vers la page de connexion -->
+        <li class="connexion"><a href="page6.html">Connexion</a></li>
+    </ul>
+</nav>
 
-                    <button type="submit">Se connecter</button>
+<!-- Contenu principal -->
+<main>
+    <!-- Section contenant le formulaire de connexion -->
+    <section class="login-container">
+        <h1>Connexion</h1>
 
-                </form>
+        <!-- Formulaire de connexion -->
+        <form method="POST" action="login.php">
+            <!-- Champ email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-                <div class="footer">
-                    <p>Pas de compte ? <a href="page7.html">Créer un compte</a></p>
-                </div>
-            </section>
-        </main>
+            <!-- Champ mot de passe -->
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
 
-        <footer>
-            <a href="page5.html" class="precedente">Page Précédente</a>
-            <p>Authentifiez-vous</p>
-            <a href="page7.html" class="suivante">Page suivante</a>
-        </footer>
+            <!-- Bouton de soumission -->
+            <button type="submit">Se connecter</button>
+        </form>
 
-    </body>
+        <!-- Petit footer interne pour proposer la création de compte -->
+        <div class="footer">
+            <p>Pas de compte ? <a href="page7.html">Créer un compte</a></p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer : bas de page avec navigation -->
+<footer>
+    <!-- Lien vers la page précédente -->
+    <a href="page5.html" class="precedente">Page Précédente</a>
+
+    <!-- Texte centré -->
+    <p>Authentifiez-vous</p>
+
+    <!-- Lien vers la page suivante -->
+    <a href="page7.html" class="suivante">Page suivante</a>
+</footer>
+
+</body>
 </html>
