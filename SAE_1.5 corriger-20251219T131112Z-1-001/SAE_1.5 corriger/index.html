@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon"  href="image/LogoUVSQ.png">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="princ">
+    <a href="https://www.iut-velizy-rambouillet.uvsq.fr/">
+        <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" class="logo-iut" width="400">
+    </a>
+    <h1>IUT de Vélizy - Département informatique</h1>
+</header>
+
+<!-- ================= MENU ================= -->
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+            <a href="#">Organisations</a>
+            <ul class="submenu">
+                <li><a href="page1.html">Capgemini Engineering</a></li>
+                <li><a href="page2.html">Association Bernard Gregory</a></li>
+                <li><a href="page3.html">INRAE</a></li>
+            </ul>
+        </li>
+
+        <li><a href="page4.html">Secteur</a></li>
+        <li><a href="page5.html">Idées</a></li>
+
+        <li class="connexion"><a href="page6.html">Connexion</a></li>
+    </ul>
+</nav>
+
+<!-- ================= CONTENU ================= -->
+<main>
+    <section class="hero">
+        <h1>Bienvenue sur notre page d'accueil !</h1>
+        <p>
+            Dans le cadre de notre
+            <abbr title="Situation d'Apprentissage et d'Évaluation">SAE</abbr>,
+            nous avons analysé plusieurs organisations du secteur scientifique
+            et technique.
+        </p>
+        <p>
+            Projet réalisé en binôme par Yacine et Achraf. Bonne visite !
+        </p>
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <a href="page7.html">Page précédente</a>
+    <p>Yacine Amrou & Achraf Elhadri</p>
+    <a href="page1.html">Page suivante</a>
+</footer>
+
+<!-- ================= RGPD / COOKIES ================= -->
+
+<!-- Radios cachés (choix distincts) -->
+<input type="radio" name="cookie" id="cookie-accept" hidden>
+<input type="radio" name="cookie" id="cookie-refuse" hidden>
+
+<div class="cookie-banner">
+    <p>
+        Ce site utilise des cookies pour améliorer votre expérience et respecter le RGPD.
+        Souhaitez-vous accepter ou refuser l’utilisation des cookies ?
+    </p>
+
+    <div class="cookie-buttons">
+        <label for="cookie-accept" class="btn accept">Accepter</label>
+        <label for="cookie-refuse" class="btn refuse">Refuser</label>
+    </div>
+</div>
+
+</body>
+</html>

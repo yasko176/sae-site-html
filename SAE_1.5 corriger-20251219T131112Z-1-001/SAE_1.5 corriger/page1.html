@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Organisation 1</title>
+
+    <!-- On relie la page au fichier CSS global -->
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon"  href="image/LogoUVSQ.png">
+
+</head>
+
+<body>
+
+<!-- Header : partie haute avec logo et titre -->
+<header>
+    <!-- Logo de l'IUT cliquable qui renvoie vers le site officiel -->
+    <a href="https://www.iut-velizy-rambouillet.uvsq.fr/">
+        <img src="image/iut_velizy.png" alt="Image de l'IUT de Vélizy" class="iut-image">
+    </a>
+    <!-- Titre principal du site -->
+    <h1>IUT de Vélizy - Département informatique</h1>
+</header>
+
+<!-- Menu de navigation principal -->
+<nav class="menu">
+    <ul>
+        <!-- Lien vers la page d'accueil -->
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- Menu déroulant pour les organisations -->
+        <li class="dropdown">
+            <a href="#">Organisations</a>
+            <ul class="submenu">
+                <!-- Chaque lien correspond à une organisation étudiée -->
+                <li><a href="page1.html">Capgemini Engineering</a></li>
+                <li><a href="page2.html">Association Bernard Gregory</a></li>
+                <li><a href="page3.html">INRAE</a></li>
+            </ul>
+        </li>
+
+        <!-- Autres pages -->
+        <li><a href="page4.html">Secteur</a></li>
+        <li><a href="page5.html">Idées</a></li>
+
+        <!-- Lien vers la page de connexion -->
+        <li class="connexion"><a href="page6.html">Connexion</a></li>
+    </ul>
+</nav>
+
+<!-- Titre secondaire pour introduire la page -->
+<h2>Voici une présentation sur notre première organisation</h2>
+
+<!-- Contenu principal -->
+<main>
+    <!-- Tableau de présentation de l'organisation -->
+    <table>
+        <!-- Caption : titre du tableau avec logo -->
+        <caption>
+            <!-- Logo de l'organisation cliquable (ouvre en grand) -->
+            <a href="image/logo_Capgemini.jpg" target="_blank">
+                <img src="image/logo_Capgemini.jpg" alt="Image de l'entreprise Capgemini Engineering" class="cap">
+            </a>
+            Organisation 1 : Capgemini Engineering
+        </caption>
+
+        <!-- En-tête du tableau -->
+        <thead>
+        <tr>
+            <th>Éléments de caractérisation de l'organisation étudiée</th>
+            <th>Éléments de réponse</th>
+            <th>Justifications</th>
+        </tr>
+        </thead>
+
+        <!-- Corps du tableau -->
+        <tbody>
+        <tr>
+            <th>Nom de l'organisation</th>
+            <td>Capgemini Engineering</td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <th>Type d'organisation</th>
+            <td>Entreprise privée</td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <th>But / Finalité</th>
+            <td>Lucratif</td>
+            <td>     </td>
+        </tr>
+        <tr>
+            <th>Nationalité</th>
+            <td>Française</td>
+            <td>Siège social en France</td>
+        </tr>
+        <tr>
+            <th>Champ d'action géographique</th>
+            <td>International</td>
+            <td>Présente dans plus de 30 pays</td>
+        </tr>
+        <tr>
+            <th>Type de production</th>
+            <td>Services marchands</td>
+            <td>Prestations de conseil en ingénierie et R&D</td>
+        </tr>
+        <tr>
+            <th>Taille</th>
+            <td>Grande entreprise</td>
+            <td>Plus de 5 000 salariés</td>
+        </tr>
+        <tr>
+            <th>Activités</th>
+            <td>Ingénierie, R&D, transformation numérique</td>
+            <td>Conception de systèmes complexes, <abbr title="Intelligence artificielle">IA</abbr>, cybersécurité</td>
+        </tr>
+        <tr>
+            <th>Secteur(s) d'activité</th>
+            <td>Tertiaire marchand</td>
+            <td>Services aux entreprises dans les secteurs industriels</td>
+        </tr>
+        <tr>
+            <th>Ressources</th>
+            <td>Humaines, technologiques, financières privées</td>
+            <td>Ingénieurs, outils numériques, revenus commerciaux</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<!-- Footer : bas de page avec navigation -->
+<footer>
+    <!-- Lien vers la page précédente -->
+    <a href="index.html" class="precedente">Page Précédente</a>
+
+    <!-- Texte centré -->
+    <p>Yacine Amrou & Achraf Elhadri</p>
+
+    <!-- Lien vers la page suivante -->
+    <a href="page2.html" class="suivante">Page suivante</a>
+</footer>
+
+</body>
+</html>

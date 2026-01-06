@@ -1,0 +1,421 @@
+/* =========================
+   STYLES COMMUNS (toutes pages)
+   Commentaires : ici on définit le style de base partagé par toutes les pages
+   ========================= */
+html, body {
+    /* On force la page à occuper toute la hauteur et on supprime les marges par défaut */
+    height: 100%;
+    margin: 0;
+
+    /* Police et couleurs de base pour tout le site */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #FAFAFA;
+    color: #1F2937;
+
+    /* Flexbox pour permettre au footer d'être collé en bas (main prendra l'espace restant) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header : zone en haut avec logo et titre */
+header {
+    display: flex;               /* on aligne logo et titre sur une ligne */
+    align-items: center;         /* centrage vertical */
+    justify-content: center;     /* centrage horizontal */
+    gap: 20px;                   /* espace entre logo et titre */
+    padding: 20px;               /* espace interne */
+    background: linear-gradient(90deg, #4f46e5, #6366f1); /* dégradé sympa */
+    color: white;                /* texte blanc sur le header */
+}
+
+header h1 {
+    font-size: 1.8rem;           /* taille du titre dans le header */
+}
+
+/* =========================
+   MENU DEROULANT
+   Commentaires : règles pour le sous-menu (Organisations)
+   ========================= */
+/* Le sous-menu est caché par défaut et apparaît au hover */
+.submenu {
+    display: none;               /* caché par défaut */
+    list-style: none;            /* pas de puces */
+    position: absolute;          /* positionnement relatif au parent */
+    left: 0;
+    top: 35px;                   /* placé juste en dessous du lien parent */
+    background: white;           /* fond blanc pour le menu */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 250px;            /* on élargit pour éviter les retours à la ligne */
+    white-space: nowrap;         /* empêche le texte de passer à la ligne */
+    opacity: 0;                  /* invisible (transition) */
+    transition: opacity 0.3s;    /* animation d'apparition */
+}
+
+/* Espacement entre les éléments du sous-menu */
+.submenu li {
+    margin: 5px 0;
+}
+
+/* Chaque lien du sous-menu occupe toute la largeur et est cliquable */
+.submenu li a {
+    display: block;
+    padding: 5px 10px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+
+/* Effet au survol pour rendre le menu plus interactif */
+.submenu li a:hover {
+    background-color: #f0f0f0;
+    color: #4f46e5;
+}
+
+/* =========================
+   CONTENU PRINCIPAL
+   Commentaires : main prend l'espace restant pour pousser le footer en bas
+   ========================= */
+main {
+    flex: 1;                     /* prend tout l'espace disponible */
+    padding: 40px;               /* espace interne */
+}
+
+/* =========================
+   FOOTER
+   Commentaires : footer sombre, lisible et collé en bas grâce au flex du body
+   ========================= */
+footer {
+    margin-top: auto;            /* pousse le footer en bas si le contenu est court */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #111827;         /* fond sombre */
+    color: #f9fafb;              /* texte clair */
+    font-size: 0.9rem;
+}
+
+/* Liens dans le footer */
+footer a {
+    color: #a0a2f8;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   MENU PRINCIPAL
+   Commentaires : barre de navigation principale (sticky en haut)
+   ========================= */
+.menu {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    position: sticky;            /* reste visible en haut quand on scroll */
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Liste horizontale pour les items du menu */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Chaque item du menu peut contenir un sous-menu (position relative) */
+.menu ul li {
+    position: relative;
+}
+
+/* Style des liens du menu */
+.menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    color: #1F2937;
+}
+
+/* Effet hover pour les liens du menu */
+.menu ul li a:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+/* On pousse l'élément connexion à droite avec margin-left auto */
+.menu ul .connexion {
+    margin-left: auto;
+}
+
+/* Réaffectation du sous-menu si nécessaire (sécurité si doublon de règles) */
+.submenu {
+    /* cette règle est volontairement redondante pour s'assurer du comportement */
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 200px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Au survol du parent .dropdown on affiche le sous-menu */
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+}
+
+/* Style des liens du sous-menu (sécurité / fallback) */
+.submenu li a {
+    padding: 5px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+.submenu li a:hover {
+    color: #4f46e5;
+}
+
+/* =========================
+   PAGE ACCUEIL (hero section)
+   Commentaires : bloc d'accueil attractif avec dégradé et ombre
+   ========================= */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 900px;
+    margin: 40px auto;           /* centré horizontalement */
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+/* =========================
+   PAGES ORGANISATIONS (tableaux)
+   Commentaires : styles pour les tableaux et les logos dans caption
+   ========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;   /* supprime les doubles bordures */
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+thead th {
+    background: #f4f4f4;         /* fond clair pour l'en-tête */
+}
+caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+    text-align: center;          /* centre le titre du tableau */
+}
+
+/* Logos dans les captions : centrés et arrondis */
+.logo-table, .cap, .abg, .inrae {
+    width: 250px;                /* taille plus grande pour les logos */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;         /* centré et espace en dessous */
+    border-radius: 12px;         /* coins arrondis pour un rendu plus doux */
+}
+
+/* =========================
+   PAGES SECTEUR / IDEES
+   Commentaires : sections blanches avec ombre pour séparer le contenu
+   ========================= */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.analyse {
+    color: #023e8a;              /* couleur pour les titres d'analyse */
+}
+.dynamiser {
+    color: #0a9396;              /* couleur pour les éléments "dynamiser" */
+}
+
+/* =========================
+   PAGES CONNEXION
+   Commentaires : styles pour les formulaires de connexion / inscription
+   ========================= */
+.login-container,
+.register-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;            /* limite la largeur du formulaire */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin: auto;                /* centré horizontalement */
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #374151;
+}
+input, select {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #4f46e5;       /* couleur de focus cohérente avec le thème */
+}
+button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #4338ca;
+}
+/* =========================
+   AFFICHE COOKIE-RGPD
+   ========================= */
+
+/* Style de la bannière RGPD */
+.cookie-banner {
+    position: fixed;      /* Fixée en bas de l’écran */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111827;  /* Fond sombre */
+    color: #f9fafb;       /* Texte clair */
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2); /* Ombre pour le relief */
+    z-index: 1000;        /* Toujours au-dessus du contenu */
+}
+
+/* Conteneur des boutons */
+.cookie-buttons {
+    margin-top: 10px;
+}
+
+/* Style commun aux boutons */
+.cookie-buttons .btn {
+    margin: 0 8px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Bouton Accepter (violet) */
+.accept {
+    background: #4f46e5;
+    color: white;
+}
+
+/* Bouton Refuser (gris) */
+.refuse {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* =========================
+   AFFICHE COOKIE-RGPD (CORRIGÉ)
+   ========================= */
+
+/* Style de la bannière RGPD */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111827;
+    color: #f9fafb;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Conteneur des boutons */
+.cookie-buttons {
+    margin-top: 10px;
+}
+
+/* Boutons RGPD */
+.cookie-buttons .btn {
+    margin: 0 8px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Bouton Accepter */
+.accept {
+    background: #4f46e5;
+    color: white;
+}
+
+/* Bouton Refuser */
+.refuse {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* Cache la bannière si l’un des choix est sélectionné */
+#cookie-accept:checked ~ .cookie-banner,
+#cookie-refuse:checked ~ .cookie-banner {
+    display: none;
+}
+
+
+/* Dans votre fichier style.css ou balise <style> */
+.iut-image {
+    width: 400px; /* Ici, on utilise l'unité 'px' ! */
+    height: auto;
+}
+
